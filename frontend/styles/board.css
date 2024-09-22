@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.postit-grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 기본적으로 한 줄에 5개 */
+    gap: 80px 30px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.postit {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 270px;
+    width: 210px;
+    padding: 1rem;
+    background: #f8e58c;
+    color: black;
+    justify-content: center;
+}
+
+.postit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 21px;
+    background: #FAEBA0;
+    z-index: 1;
+}
+
+.postit .postit-content {
+    justify-content: center;
+    text-align: left;
+    background: #f8e58c;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.postit .postit-content h2,
+.postit .postit-content h4,
+.postit .postit-content a
+{
+    display: block;
+    color: black;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    background: #f8e58c;
+    margin-top: 10%;
+}
+
+.postit .postit-content h2 {
+    font-size: 1.2rem;
+    background: #f8e58c;
+}
+
+.postit .postit-content h4 {
+    font-size: 0.8rem;
+    background: #f8e58c;
+}
+
+.postit .like {
+    background: #f8e58c;
+    position: absolute;
+    color: black;
+    display: flex;
+    margin-left: 0.5rem;
+    bottom: 1rem;
+}
+
+.postit .like button {
+    background-color: transparent;
+    display: flex;
+    border: none;
+    cursor: pointer;
+}
+
+.postit .like p,
+.postit .like i {
+    background-color: transparent;
+}
+#user-postit-container .postit{
+    display: flex;
+    justify-content:space-between;
+}
+#user-postit-container .postit a{
+    font-size: 3rem;
+    background: #f8e58c;
+}
+#user-postit-container .postit {
+    background: #f8e58c;
+
+}
+#user-postit-container .postit  p {
+    font-size:  0.8rem;
+    background-color: #f8e58c;
+    margin-top: auto;
+}
+
+.postit .like p {
+    margin-left: 0.8rem;
+}
+
+.postit .user-page-postit{
+    background-color: transparent;
+    font-size: 1rem;
+    color: #333;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.postit .user-page-postit .icon-container{
+    display: block;
+    text-align: center;
+    width: 100%;
+    background-color: #f8e58c;
+}
+
+.postit .user-page-postit .icon-container svg{
+    display: block;
+    color: black;
+    background-color: transparent;
+    width: 30%;
+    height: 30%;
+    margin: auto;
+
+}
+
+.postit .user-page-postit button{
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 15%;
+    width: 100%;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 더 민감한 반응을 위한 그리드 컬럼 수 조정 */
+@media (max-width: 1600px) {
+    .postit-grid-container {
+        grid-template-columns: repeat(4, 1fr); /* 4개씩 배치 */
+    }
+}
+
+@media (max-width: 1400px) {
+    .postit-grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 3개씩 배치 */
+    }
+}
+
+@media (max-width: 1200px) {
+    .postit-grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2개씩 배치 */
+    }
+}
+
+@media (max-width: 1000px) {
+    .postit-grid-container {
+        grid-template-columns: 1fr; /* 1개씩 배치 */
+    }
+}

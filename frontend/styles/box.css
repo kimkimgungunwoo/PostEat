@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 한 줄에 두 개의 박스 배치 */
+    grid-row-gap: 90px; /* 상하 간격 유지 */
+    grid-column-gap: 5px; /* 좌우 간격 줄이기 */
+    width: 100%;
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 가로 가운데 정렬 */
+    margin-top: 10%;
+    justify-items: center; /* 각 그리드 항목을 수평 중앙 정렬 */
+    align-content: center; /* 그리드 항목을 수직 중앙 정렬 */
+}
+
+.box {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; /* 요소가 줄을 넘어가면 자동 줄바꿈 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    background-color: #f8e58c; /* 박스 배경색 */
+    height: 380px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: #FAEBA0;
+    z-index: 3;
+}
+
+.box .content {
+    background-color: transparent;
+    font-size: 2rem;
+    margin: 10px;
+    color: #333;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.box .content .icon-container {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+}
+
+.box .content .icon-container svg {
+    display: block;
+    color: black;
+    background-color: transparent;
+    width: 40%;
+    height: 40%;
+    margin: auto;
+}
+
+.box .content a {
+    background-color: transparent;
+    color: black;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.box h2 {
+    background-color: transparent;
+    font-size: 2rem;
+    margin: 10px;
+    color: #333;
+    display: inline-block;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .box-container {
+        grid-template-columns: 1fr; /* 화면이 작아지면 세로로 나열 */
+        justify-items: center; /* 중앙 정렬 유지 */
+    }
+}

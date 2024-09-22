@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 수정된 메타 태그 -->
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/button.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/postitform.css">
+    <!-- 수정된 CSS 파일 경로 -->
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav>
+            <input placeholder="Searth the internet..." type="text" id=search_board" name="text" class="input">
+            <ul>
+                <li>
+                    <button id="board-button">Boards</button>
+                </li>
+                <li>
+                    <button id="mypage-button">Mypage</button>
+                </li>
+                <li>
+                    <button id="login-logout">Login/Logout</button>
+                </li>
+                <li>
+                    <button id="edit-button">Edit</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="form-container">
+        <div class="postit-wrapper"  id="loginForm">
+            <form class="postit-form">
+                <h1>Login</h1>
+                <label for="email">email</label>
+                <input type="text" id="email" name="email" placeholder="input email" required autocomplete="email">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="input password" required>
+            </form>
+            <div class="button-container">
+                <button type="submit" class="postit-button" id="loginButton">login</button>
+                <button type="button" class="postit-button">Sign up</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="scripts/auth.js"></script>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 수정된 메타 태그 -->
+    <title>Board</title>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/button.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/board.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="scripts/postit.js" defer></script>
+    <!-- 수정된 CSS 파일 경로 -->
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav>
+            <input placeholder="Searth the internet..." type="text" id=search_board" name="text" class="input">
+            <ul>
+                <li>
+                    <button id="board-button">Boards</button>
+                </li>
+                <li>
+                    <button id="mypage-button">Mypage</button>
+                </li>
+                <li>
+                    <button id="login-logout">Login/Logout</button>
+                </li>
+                <li>
+                    <button id="edit-button">Edit-postit</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="postit-grid-container" id="postit-container">
+
+    </div>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/app.js"></script>
+</main>
+
+</body>

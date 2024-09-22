@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-container {
+    margin-top: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.postit-wrapper {
+    position: relative; /* 버튼을 포스트잇 바깥으로 이동시키기 위한 설정 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.postit-form {
+    display: flex;
+    flex-direction: column;
+    width: 400px; /* 크기 확대 */
+    padding: 2rem; /* 패딩 확대 */
+    background: #f8e58c;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    position: relative;
+    z-index: 1; /* 버튼이 포스트잇 아래로 보이도록 */
+}
+
+.postit-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px; /* 높이 확대 */
+    background: #FAEBA0;
+    z-index: 1;
+    border-radius: 8px 8px 0 0; /* 상단 모서리 둥글게 */
+}
+
+.postit-form h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2rem; /* 제목 크기 확대 */
+    text-align: center;
+    background: transparent;
+}
+
+.postit-form label {
+    font-size: 1.2rem; /* 레이블 크기 확대 */
+    margin-bottom: 5px;
+    color: #333;
+    background-color: transparent;
+}
+
+.postit-form input[type="text"],
+.postit-form input[type="password"],
+.postit-form input[type="email"],
+.postit-form textarea {
+    width: 100%;
+    padding: 15px; /* 패딩 확대 */
+    margin-bottom: 20px; /* 마진 확대 */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.2rem; /* 폰트 크기 확대 */
+    background-color: transparent; /* 배경 투명 */
+}
+
+.postit-form textarea {
+    resize: vertical; /* 세로로만 크기 조정 가능 */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* 버튼들을 세로로 나열 */
+    align-items: center; /* 버튼들을 가운데 정렬 */
+    width: 100%;
+    margin-top: 20px; /* 폼과 버튼 사이의 간격 */
+}
+
+.postit-button {
+    padding: 10px 20px; /* 버튼 크기 줄이기 */
+    background-color: #f8e58c; /* 버튼 배경색 설정 */
+    color: #333; /* 버튼 텍스트 색상 */
+    border: none;
+    border-radius: 20px; /* 둥글게 디자인 */
+    font-size: 1rem; /* 폰트 크기 줄이기 */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* 버튼 사이 간격 */
+    width: 50%; /* 버튼 너비를 버튼 컨테이너에 맞게 조정 */
+    max-width: 300px; /* 버튼의 최대 너비 */
+}
+
+.postit-button:hover {
+    background-color: #e2d47a; /* 버튼 호버 색상 */
+}

@@ -1,0 +1,81 @@
+/* 기본 스타일 설정 */
+* {
+    background-color: #33974F;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    background-color: #33974F;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    /*padding: 1rem;*/
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 97%;
+    border-bottom: #f8e58c 4px solid;
+}
+
+/* Flexbox로 자식 요소들을 양쪽 끝에 배치 */
+header nav {
+    display: flex;
+    justify-content: space-between; /* 좌우 끝에 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+    width: 100%;
+}
+
+header nav .input {
+    width: 40%;
+    color:#f8e58c;
+    /*max-width: 220px;*/
+    height: 3rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 3px solid #f8e58c;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0 0 20px -18px;
+}
+
+.input:hover {
+    border: 2px solid lightgrey;
+    box-shadow: 0 0 20px -17px;
+}
+
+.input:active {
+    transform: scale(0.95);
+}
+
+.input:focus {
+    border:4px solid #f8e58c;
+}
+.input::placeholder {
+    color: #f8e58c; /* 원하는 색상으로 변경 (여기서는 연한 회색) */
+    opacity: 1; /* 필요에 따라 opacity 조정 */
+}
+
+header nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    padding: 10px;
+}

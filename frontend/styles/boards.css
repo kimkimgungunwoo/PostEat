@@ -1,0 +1,108 @@
+/* 기본 스타일 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.board-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 기본적으로 한 줄에 4개씩 배치 */
+    gap: 100px 70px; /* 기본 간격 설정 */
+    padding: 10px;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-content: center; /* 수직 중앙 정렬 */
+    width: fit-content; /* 그리드 컨테이너의 너비를 내용에 맞게 조정 */
+    margin: 0 auto; /* 부모 컨테이너에서 수평 중앙에 배치 */
+    margin-top: 100px; /* header와의 간격 확보 */
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    height: 200px; /* 높이 설정 */
+    width: 400px; /* 너비를 고정값으로 설정 */
+    padding: 1rem;
+    border-radius: 12px;
+    background: transparent;
+    border: 3px solid #f8e58c;
+    color: #D2DC61;
+    transition: 0.2s;
+}
+
+/* 제목과 부제목 스타일 */
+.board h2 a,
+.board h4 a {
+    display: block;
+    color: #D2DC61;
+    word-wrap: break-word; /* 긴 단어를 줄바꿈 */
+    overflow-wrap: break-word; /* 긴 단어를 줄바꿈 */
+    white-space: normal; /* 텍스트 줄바꿈을 허용 */
+}
+
+.board h2 a {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.board h4 a {
+    font-size: 1.8rem;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* 스타와 좋아요 버튼 스타일 */
+.board .star,
+.board .like {
+    display: flex;
+    align-items: center; /* 아이템들을 수직으로 중앙 정렬 */
+    color: #D2DC61;
+}
+
+.board i {
+    margin-left: 0.5rem;
+}
+
+.board .star button,
+.board .like button {
+    display: flex;
+    border: none;
+    color: #D2DC61;
+    cursor: pointer;
+}
+
+.board .star p,
+.board .like p {
+    margin-left: 1rem;
+    margin-bottom: 10px;
+}
+
+/* 작은 화면에 대한 스타일 조정 */
+@media (max-width: 1800px) {
+    .board-grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 화면 크기에 따라 3개씩 배치 */
+        gap: 100px 70px; /* 간격 조정 */
+    }
+}
+
+@media (max-width: 1400px) {
+    .board-grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 화면 크기에 따라 2개씩 배치 */
+        gap: 130px 100px; /* 간격 조정 */
+    }
+}
+
+@media (max-width: 1000px) {
+    .board-grid-container {
+        grid-template-columns: repeat(1, 1fr); /* 화면 크기에 따라 1개씩 배치 */
+        gap: 150px; /* 간격 조정 */
+    }
+}
+
+@media (max-width: 600px) {
+    .board-grid-container {
+        grid-template-columns: repeat(1, 1fr); /* 화면 크기에 따라 1개씩 배치 */
+        gap: 20px; /* 간격 조정 */
+    }
+}

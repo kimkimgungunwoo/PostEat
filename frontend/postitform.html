@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 수정된 메타 태그 -->
+    <title>PostPostit</title>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/button.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/postitform.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- 수정된 CSS 파일 경로 -->
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav>
+            <input placeholder="Searth the internet..." type="text" id=search_board" name="text" class="input">
+            <ul>
+                <li>
+                    <button id="board-button">Boards</button>
+                </li>
+                <li>
+                    <button id="mypage-button">Mypage</button>
+                </li>
+                <li>
+                    <button id="login-logout">Login/Logout</button>
+                </li>
+                <li>
+                    <button id="edit-button">Edit</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="form-container">
+        <div class="postit-wrapper">
+            <form class="postit-form">
+                <h1>PostIt</h1>
+                <label for="address">adress</label>
+                <input type="text" id="address" name="adress" placeholder="input adress" required>
+                <label for="content">Content</label>
+                <textarea id="content" name="content" rows="6" placeholder="input content" required></textarea>
+            </form>
+            <button type="submit" class="postit-button" id="postitsubmit">submit</button>
+        </div>
+    </div>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/app.js"></script>
+</main>
+
+</body>
+</html>

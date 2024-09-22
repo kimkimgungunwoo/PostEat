@@ -1,0 +1,41 @@
+* {
+    background-color: #33974F;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0; /* 테두리의 모서리 둥글게 설정 (필요시 조정) */
+    background-color: #33974F; /* 내부 배경색 설정 */
+}
+
+body{
+    background-color: #33974F;
+    min-height: 100vh;
+}
+
+.userpage-button-container{
+    background-color: transparent;
+    border: none;
+    margin: auto;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.userpage-button-container button{
+    padding: 10px 20px;
+    background-color: #f8e58c;
+    color: #333;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px;
+    margin: auto;
+}
